@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <androidx.cardview.widget.CardView
+        android:padding="10dp"
+        android:background="@color/white"
+        app:cardCornerRadius="14dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/alert_title"
+                android:gravity="center"
+                android:visibility="visible"
+                android:padding="5dp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginStart="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Help Desk"
+                android:textSize="14sp"
+                android:textColor="@color/purple_500"
+                android:textStyle="bold"
+                android:layout_gravity="center"/>
+
+            <RelativeLayout
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/alert_message"
+                    android:padding="10dp"
+                    android:gravity="center"
+                    android:layout_margin="10dp"
+                    android:text="Android Application Development Full Course With Kotlin"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:id="@+id/alert_view"
+                    android:layout_below="@id/alert_message"
+                    android:visibility="gone"
+                    android:background="@color/white"/>
+
+                <LinearLayout
+                    android:gravity="center"
+                    android:layout_below="@id/alert_view"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp">
+
+                    <Button
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:id="@+id/btnOk"
+                        android:layout_gravity="center"
+                        android:textColor="@color/white"
+                        android:text="OK"
+                        android:textStyle="bold"
+                        android:textSize="14sp"
+                        android:textAllCaps="true"/>
+
+                </LinearLayout>
+                
+            </RelativeLayout>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</LinearLayout>

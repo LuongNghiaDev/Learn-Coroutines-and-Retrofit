@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.learn4ingredients">
+
+    <uses-permission android:name="android.permission.WRITE_USER_DICTIONARY" />
+    <uses-permission android:name="android.permission.READ_USER_DICTIONARY" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.Learn4ingredients">
+        <activity
+            android:name=".Coroutines.CoroutinesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customview.MotionLayoutActivity"
+            android:exported="false" />
+        <activity
+            android:name=".customview.CustomViewActivity"
+            android:exported="false" />
+        <activity
+            android:name=".BroadcastReceiver.BroadCastActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Service.BoundServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".Service.ServiceActivity"
+            android:exported="false" />
+        <activity
+            android:name=".ContentProvider.MainActivity"
+            android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <service android:name=".Service.MyStartedService" />
+
+        <receiver
+            android:name=".BroadcastReceiver.AirPlaneBroadCast"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.AIRPLANE_MODE" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>
